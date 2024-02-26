@@ -6,7 +6,7 @@
 
 > Container 기반 Redis 교육자료 !!
 
-본 교육은 Container를 기반으로 한 Kafka, Redis 를 학습하는 과정으로 kubernetes 환경에서 Redis install수행하는 방법과 각각 모니터링 솔루션을 확인하는 방법을 알아보며 Spring Boot / Python 으로 실습한다.
+본 교육은 Container를 기반으로 한 Redis 를 학습하는 과정으로 kubernetes 환경에서 Redis install수행하는 방법과 각각 모니터링 솔루션을 확인하는 방법을 알아보며 Spring Boot / Python 으로 실습한다.
 
 문의: 송양종( yj.song@kt.com / ssongmantop@gmail.com )
 
@@ -19,7 +19,7 @@
 * MobaxTerm 설치
 * Typora 설치
 * 교육자료 Download
-* 실흡환경준비(Cloiud)
+* 실습환경준비(Cloud)
 
 
 

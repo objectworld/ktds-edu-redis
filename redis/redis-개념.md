@@ -87,7 +87,7 @@
 
 # 2. Caching
 
-Redis 를 사용하는 가장 큰 목적은 Caching이다.  Caching 이 무엇이고 주의사항등에 대해 알아보자.
+Redis 를 사용하는 가장 큰 목적은 Caching이다.  Caching 이 무엇이고 주의사항 등에 대해 알아보자.
 
 
 
