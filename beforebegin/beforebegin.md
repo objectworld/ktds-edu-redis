@@ -22,12 +22,12 @@ CMD / PowerShell / putty 와 같은 기본 터미널을 이용해도 되지만 �
 
 
 
-- download 위치
-  - 링크: https://download.mobatek.net/2312023031823706/MobaXterm_Installer_v23.1.zip
+- 다운로드 위치
+  - 링크: https://download.mobatek.net/2362023122033030/MobaXterm_Installer_v23.6.zip
 
 - mobaxterm 실행
 
-![image-20220702160114315](beforebegin.assets/image-20220702160114315.png)
+![image-20220702160114315](./beforebegin.assets/image-20220702160114315-1709458585439-4.png)
 
 
 
@@ -39,8 +39,10 @@ CMD / PowerShell / putty 와 같은 기본 터미널을 이용해도 되지만 �
 
 교육문서를 다운로드 받으려면 Git Command 가 필요하다. Windows 에서는 기본 제공되지 않아 별도 설치 해야 한다.
 
-- 다운로드 주소 : https://github.com/git-for-windows/git/releases/download/v2.40.1.windows.1/Git-2.40.1-64-bit.exe
 - 참조 링크 : https://git-scm.com/
+- 다운로드 위치 
+  - 링크 : https://github.com/git-for-windows/git/releases/download/v2.44.0.windows.1/Git-2.44.0-64-bit.exe
+
 
 
 
@@ -54,16 +56,12 @@ CMD / PowerShell / putty 와 같은 기본 터미널을 이용해도 되지만 �
 
 ### (1) 설치
 
-- download 위치
-  - 다운로드주소 : https://download.typora.io/windows/typora-setup-x64.exe
-
-
-- [참고] 링크: https://typora.io/
+- 참조 링크: https://typora.io/
+- 다운로드 위치
+  - 링크 : https://download.typora.io/windows/typora-setup-x64.exe
 
 
 - Typora 실행
-
-
 
 
 
@@ -79,7 +77,7 @@ CMD / PowerShell / putty 와 같은 기본 터미널을 이용해도 되지만 �
 
 
 
-![image-20220702154444773](beforebegin.assets/image-20220702154444773.png)
+![image-20220702154444773](./beforebegin.assets/image-20220702154444773-1709458585440-5.png)
 
 
 
@@ -93,26 +91,84 @@ CMD / PowerShell / putty 와 같은 기본 터미널을 이용해도 되지만 �
 
 ## 1.4 STS 설치
 
-### (1) STS 설치
 
-- download 링크
-  - https://download.springsource.com/release/STS4/4.19.1.RELEASE/dist/e4.28/spring-tool-suite-4-4.19.1.RELEASE-e4.28.0-win32.win32.x86_64.self-extracting.jar
+### (1) java 17 설치
+
+java 17이 설치되어 있지 않은 경우에만 수행한다.
+
+* 참고링크
+  * oracle.com 링크 : https://www.oracle.com/java/technologies/downloads/#jdk17-windows
+  * 설치관련 문서 : https://jiurinie.tistory.com/131
+
+- jdk 다운로드 주소
+  - 링크: https://download.oracle.com/java/17/latest/jdk-17_windows-x64_bin.msi
+- 설치완료후 확인
+
+```sh
+# CMD 명령 프롬프트 windows에서 ...
+
+C:\Users\ssong>java -version
+openjdk version "17.0.5" 2022-10-18
+OpenJDK Runtime Environment Temurin-17.0.5+8 (build 17.0.5+8)
+OpenJDK 64-Bit Server VM Temurin-17.0.5+8 (build 17.0.5+8, mixed mode, sharing)
+
+```
+
+
+
+
+
+### (2) STS 설치
+
+- 참고 링크
+
+  - STS 참조 링크: https://spring.io/tools
+  - 설치관련 문서 : https://kjchoi.co.kr/17
+
+- 다운로드 주소
+
+  - 링크: https://cdn.spring.io/spring-tools/release/STS4/4.21.1.RELEASE/dist/e4.30/spring-tool-suite-4-4.21.1.RELEASE-e4.30.0-win32.win32.x86_64.self-extracting.jar
 
 - 설치
-  - 적당한 위치에 설치하자.
 
-- Workspace 설정
-  - 위치 : C:\workspace_STS4.18.1
-- [참고] STS링크 : https://spring.io/tools
+  - 적당한 위치에 압축 해제 하자.
 
+    - [참고]
 
+      - 다운로드된 파일은 jar 파일이므로 일반적으로 더블클릭만 하면 실행파일로 압축해제 됨
 
+      - 아래와 같은 명령으로 압축해지 해도 된다.
 
-### (2) [참고] java 설치
+        - ```sh
+          # 압축해제 전
+          $ dir      .
+          2024-02-24  오후 01:00       648,346,802 spring-tool-suite-4-4.21.1.RELEASE-e4.30.0-win32.win32.x86_64.self-extracting.jar
+          
+          # 압축해제
+          $ java -jar spring-tool-suite-4-4.21.1.RELEASE-e4.30.0-win32.win32.x86_64.self-extracting.jar
+          
+          # 압축해제 후
+          $ dir      .
+          2024-02-24  오후 01:00       648,346,802 spring-tool-suite-4-4.21.1.RELEASE-e4.30.0-win32.win32.x86_64.self-extracting.jar
+          2024-02-24  오후 01:02    <DIR>          sts-4.21.1.RELEASE
+          ```
 
-- java 설치가 필요한 경우 아래 링크 참고
-  - https://download.oracle.com/java/17/latest/jdk-17_windows-x64_bin.msi
-- [참고] oracle.com 링크 : https://www.oracle.com/java/technologies/downloads/#jdk17-windows
+- STS 설정
+
+  - Workspace 설정
+    - STS 시작시 위치 변경
+    - 위치 : C:\workspace\sts-4.21.1 
+
+  - JRE 설정
+    - STS 메뉴 :  [Window] - [Prefernces] - [Java] - [Installed JREs]
+    - STS 내장된 JRE 에서 jdk-17.x  로 변경 후 apply
+    - 없으면 Add 버튼으로 추가
+  - Compiler 설정
+    - STS 메뉴 :  [Window] - [Prefernces] - [Java] - [Compiler]
+    - Compiler complicance level : 17 로 변경
+  - 인코딩 변경
+    - STS 메뉴 :  [Window] - [Prefernces] - [General] - [Workspace] - [Text file encoding]
+    - UTF-8로 변경
 
 
 
@@ -144,44 +200,21 @@ $ mkdir -p /c/githubrepo
  
 $ cd /c/githubrepo
 
-$ git clone https://github.com/ssongman/ktds-edu-kafka-redis.git
-Cloning into 'ktds-edu-kafka-redis'...
-remote: Enumerating objects: 590, done.
-remote: Counting objects: 100% (41/41), done.
-remote: Compressing objects: 100% (26/26), done.
-remote: Total 590 (delta 17), reused 28 (delta 13), pack-reused 549
-Receiving objects: 100% (590/590), 8.70 MiB | 9.77 MiB/s, done.
-Resolving deltas: 100% (259/259), done.
+$ git clone https://github.com/ssongman/ktds-edu-kafka.git
+Cloning into 'ktds-edu-kafka'...
+remote: Enumerating objects: 181, done.
+remote: Counting objects: 100% (181/181), done.
+remote: Compressing objects: 100% (119/119), done.
+remote: Total 181 (delta 33), reused 175 (delta 30), pack-reused 0
+Receiving objects: 100% (181/181), 7.84 MiB | 6.34 MiB/s, done.
+Resolving deltas: 100% (33/33), done.
+
 
 
 $ ll /c/githubrepo
-drwxr-xr-x 1 ssong 197609 0 Jun 11 14:27 ktds-edu-kafka-redis/
+drwxr-xr-x 1 ssong 197609 0 Feb 24 12:02 ktds-edu-kafka/
 
 ```
-
-
-
-만약 교육중 (오타 변경 등의 사유로) 자료가 변경되어 다시 받아야 하는 경우 가 있을 경우 해당 위치에서 git pull 만 다시 받도록 하자.
-
-```sh
-$ cd /c/githubrepo/ktds-edu-kafka-redis
-
-$ git pull
-
-
-# 만약 Download 받은자료를 수정되어서 pull 이 안되는 경우는 
-# stash 후 pull 받자.
-# stash 는 내가 수행한 작업을 commit 하기전 임시로 저장해 놓는 명령이다.
-
-$ git stash
-
-$ git pull
-
-```
-
-
-
-
 
 
 
@@ -194,10 +227,14 @@ $ git pull
 ```
 ## typora 에서 아래 파일 오픈
 
-C:\githubrepo\ktds-edu-kafka-redis\README.md
+C:\githubrepo\ktds-edu-kafka\README.md
 ```
 
-![image-20220702160433029](beforebegin.assets/image-20220702160433029.png)
+![image-20240225215314856](./beforebegin.assets/image-20240225215314856.png)
+
+
+
+
 
 
 
@@ -207,35 +244,33 @@ C:\githubrepo\ktds-edu-kafka-redis\README.md
 
 
 
-## 3.1 개인 VM 서버 주소 확인- ★
+## 3.1 개인 VM 서버 주소 확인- ★★★
 
 개인별 VM Server 접속 환경 및 Kafka 실습을 위한 개인 Topic 정보를 확인하자.
 
-| 담당자 |        소속        | VM  Server | VM  Server IP | kafka  Topic | kafka  Group | 비고 |
-| :----: | :----------------: | :--------: | :-----------: | :----------: | :----------: | :--: |
-| 송양*  | ICIS Tr 아키텍처팀 | bastion01  |  34.xx.xx.xx  | edu-topic01  | edu-group01  |      |
-|        |                    |            |               |              |              |      |
-|        |                    |            |               |              |              |      |
-|        |                    |            |               |              |              |      |
-|        |                    |            |               |              |              |      |
-|        |                    |            |               |              |              |      |
-|        |                    |            |               |              |              |      |
-|        |                    |            |               |              |              |      |
-|        |                    |            |               |              |              |      |
-|        |                    |            |               |              |              |      |
-|        |                    |            |               |              |              |      |
-|        |                    |            |               |              |              |      |
-|        |                    |            |               |              |              |      |
-|        |                    |            |               |              |              |      |
-|        |                    |            |               |              |              |      |
-|        |                    |            |               |              |              |      |
-|        |                    |            |               |              |              |      |
-|        |                    |            |               |              |              |      |
-|        |                    |            |               |              |              |      |
-|        |                    |            |               |              |              |      |
-|        |                    |            |               |              |              |      |
-
-
+|  NO  | 담당자 | 소속                | email          | VM  Server | VM  Server IP | kafka  Topic | kafka  Group   | 비고 |
+| :--: | :----: | :------------------ | -------------- | ---------- | ------------- | ------------ | -------------- | ---- |
+|  1   | 송양종 | ICIS Tr 아키텍처팀  | yj.song@kt.com | bastion01  | 34.xx.xx.xx   | edu-topic01  | edu-topic01-cg |      |
+|  2   | 송양종 | ICIS  Tr 아키텍처팀 | yj.song@kt.com | bastion02  |               | edu-topic02  | edu-topic02-cg |      |
+|  3   |        |                     |                |            |               |              |                |      |
+|      |        |                     |                |            |               |              |                |      |
+|      |        |                     |                |            |               |              |                |      |
+|      |        |                     |                |            |               |              |                |      |
+|      |        |                     |                |            |               |              |                |      |
+|      |        |                     |                |            |               |              |                |      |
+|      |        |                     |                |            |               |              |                |      |
+|      |        |                     |                |            |               |              |                |      |
+|      |        |                     |                |            |               |              |                |      |
+|      |        |                     |                |            |               |              |                |      |
+|      |        |                     |                |            |               |              |                |      |
+|      |        |                     |                |            |               |              |                |      |
+|      |        |                     |                |            |               |              |                |      |
+|      |        |                     |                |            |               |              |                |      |
+|      |        |                     |                |            |               |              |                |      |
+|      |        |                     |                |            |               |              |                |      |
+|      |        |                     |                |            |               |              |                |      |
+|      |        |                     |                |            |               |              |                |      |
+|      |        |                     |                |            |               |              |                |      |
 
 
 
@@ -243,14 +278,16 @@ C:\githubrepo\ktds-edu-kafka-redis\README.md
 
 ## 3.2 ssh (Mobaxterm) 실행
 
-Mobaxterm 을 실행하여 VM 접속정보를 위한 신규 sesion 을 생성하자.
+Mobaxterm 을 실행하여 VM 접속정보를 위한 신규 session 을 생성하자.
 
 - 메뉴
   - Session  : 상단 좌측아이콘 클릭
 
   - SSH : 팝업창 상단 아이콘 클릭
 
-![image-20230514022214007](beforebegin.assets/image-20230514022214007.png)
+![image-20240225214646366](./beforebegin.assets/image-20240225214646366.png)
+
+
 
 빨간색 영역을 주의해서 입력한 후 접속하자.
 
@@ -258,15 +295,16 @@ Mobaxterm 을 실행하여 VM 접속정보를 위한 신규 sesion 을 생성하
 
 - Romote host
   - 개인별로 접근 주소가 다르므로 위 수강생별  VM  Server IP 주소를 확인하자.
-  - ex)  bastion03 : 35.247.230.92
+  - ex)  bastion02 : 3.38.104.137
 
 - User
   - Specify username 에 Check
-  - User : ktdseduuser  입력
+  - User : ubuntu 입력
 
 - Port : 22
 - Advanced SSH settings
-  - Use private key : C:\githubrepo\ktds-edu-kafka-redis\gcp-vm-key\ktdseduuser
+  - Use private key
+    - C:\githubrepo\ktds-edu-kafka\vm-key\ktdsedu-employee.pem
     - 교육자료 Download 되는 자료에 위 key가 포함되어 있음
 
 
@@ -281,26 +319,30 @@ Mobaxterm 을 실행하여 VM 접속정보를 위한 신규 sesion 을 생성하
 이미 각자 VM에 해당 교육자료가  git clone 되어 있으므로 git pull 로 최신 데이터로 update 만 진행하자
 
 ```sh
-
 # 최신 데이터를 한번 더 받는다.
-
-$ cd ~/githubrepo/ktds-edu-kafka-redis
+$ cd ~/githubrepo/ktds-edu-kafka
 $ git pull
 
 
+```
 
 
 
-# 만약 pull일 잘 안되는 경우는 모두 삭제후 다시 git clone 받자.
 
-# 삭제
-$ rm -rf ~/githubrepo/ktds-edu-kafka-redis/
+
+## [참고] git repo 삭제후 다시 Clone
+
+만약 pull일 잘 안되는 경우는 모두 삭제후 다시 git clone 받자.
+
+```sh
+# git repo 삭제
+$ rm -rf ~/githubrepo/ktds-edu-kafka/
 
 $ cd ~/githubrepo
 
 ## git clone 수행
-$ git clone https://github.com/ssongman/ktds-edu-kafka-redis.git
-Cloning into 'ktds-edu-kafka-redis'...
+$ git clone https://github.com/ssongman/ktds-edu-kafka.git
+Cloning into 'ktds-edu-kafka'...
 remote: Enumerating objects: 320, done.
 remote: Counting objects: 100% (320/320), done.
 remote: Compressing objects: 100% (220/220), done.
@@ -310,9 +352,9 @@ Resolving deltas: 100% (95/95), done.
 
 
 # 확인
-$ cd  ~/githubrepo/ktds-edu-kafka-redis
+$ cd  ~/githubrepo/ktds-edu-kafka
 
-$ ll ~/githubrepo/ktds-edu-kafka-redis
+$ ll ~/githubrepo/ktds-edu-kafka
 drwxrwxr-x 8 ktdseduuser ktdseduuser 4096 Sep  3 12:27 .git/
 -rw-rw-r-- 1 ktdseduuser ktdseduuser  382 Sep  2 13:45 .gitignore
 -rw-rw-r-- 1 ktdseduuser ktdseduuser 4006 Sep  2 13:45 README.md
@@ -327,4 +369,40 @@ drwxrwxr-x 8 ktdseduuser ktdseduuser 4096 Sep  2 13:45 redis/
 ```
 
 
+
+
+
+## [참고] git repo 초기화 방법
+
+수정된 파일이 존재하여 git pull 이 잘 안될때는 삭제후 다시 Clone 하는 방법도 있지만
+
+내용이 많다거나 다른 사유로 인해 clone 작업이 힘들 경우 아래와 같은 명령어를 사용해도 된다.
+
+```sh
+# 1) stash
+# stash 는 내가 수행한 작업을 commit 하기전 임시로 저장해 놓는 명령이다.
+$ git stash
+$ git pull
+
+
+# 2) 마지막 commit hash 값으로 reset 처리
+## 아직 staged 에 올라가지 않은 수정파일,  untracked file 까지 모두 사라진다.
+$ git reset --hard HEAD~
+$ git pull
+
+
+# 3) untrackted file 을 초기화 해야 하는 경우
+$ git clean -f -d
+$ git pull
+
+
+# 4) 파일단위로 restore 를 원할 경우
+$ git restore modified_file
+$ git pull
+
+
+# 참고
+## commit log 확인
+$ git
+```
 
