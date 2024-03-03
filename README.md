@@ -23,20 +23,26 @@
 
 
 
-## 2. Redis 개념 ( [가이드 문서 보기](redis/redis-개념.md) )
+## 2. Redis ( [가이드 문서 보기](redis/redis-개념.md) )
 
 ### 1) Redis 개요
 
 * Redis 개요
 * Redis / Redis Cluster
 
-### 2) Caching
+
+
+
+
+## 3. Cache ( [가이드 문서 보기](redis/redis-개념.md) )
+
+### 1) Caching
 
 * Caching 정의
 * hit 관련 용어
 * Cache 사용시 주의사항
 
-### 3) Cache Pattern
+### 2) Cache Pattern
 
 * Pattern 1 : 코드성 데이터 캐싱
 * Pattern 2 : 주기 생성 데이터 캐싱
@@ -44,7 +50,7 @@
 
 
 
-## 3. Redis Hands-in ( [가이드 문서 보기](redis/redis-hands-in.md) )
+## 4. Redis Hands-in ( [가이드 문서 보기](redis/redis-hands-in.md) )
 
 ### 1) Redis Install 준비
 
