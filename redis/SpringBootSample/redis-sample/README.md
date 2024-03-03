@@ -3,6 +3,15 @@
 # curl test
 
 
+## 1) health check
+
+```sh
+
+$ curl http://localhost:8082/health
+
+```
+
+
 
 
 ## 1) set
@@ -37,6 +46,10 @@ curl -X POST http://localhost:8082/person \
 curl localhost:8082/person/aaaa
 
 curl localhost:8082/person/bbbb
+
+
+# 1초에 한번씩
+while true; do curl localhost:8082/person/aaaa; echo ; sleep 1; done;
 
 
 ```
