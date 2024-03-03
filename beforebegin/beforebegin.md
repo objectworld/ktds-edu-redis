@@ -137,7 +137,7 @@ OpenJDK 64-Bit Server VM Temurin-17.0.5+8 (build 17.0.5+8, mixed mode, sharing)
 
       - 다운로드된 파일은 jar 파일이므로 일반적으로 더블클릭만 하면 실행파일로 압축해제 됨
 
-      - 아래와 같은 명령으로 압축해지 해도 된다.
+      - 아래와 같이 java 명령으로 압축해지 해도 된다.
 
         - ```sh
           # 압축해제 전
