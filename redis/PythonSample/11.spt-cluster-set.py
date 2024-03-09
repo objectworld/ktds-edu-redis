@@ -47,9 +47,9 @@ def spt_cluster(redis_host='ds-redis-master', redis_port='6379', key_prefix='use
     start_time = time.time() # 시작시간
     for i in range(CNT):
         # print(i)
-        rc.set(f"{key_prefix}:a:{i}", i)
-        rc.set(f"{key_prefix}:b:{i}", i)
-        rc.set(f"{key_prefix}:c:{i}", i, datetime.timedelta(seconds=300))    ## TTL 300초(5분)
+        rc.set(f"{key_prefix}:a:{i}", i, datetime.timedelta(seconds=300))    ## TTL 600초(10분)
+        rc.set(f"{key_prefix}:b:{i}", i, datetime.timedelta(seconds=300))    ## TTL 600초(10분)
+        rc.set(f"{key_prefix}:c:{i}", i, datetime.timedelta(seconds=300))    ## TTL 600초(10분)
 
     end_time = time.time() # 종료시간
     print("[key 3] duration time :", end_time - start_time)  # 현재시각 - 시작시간 = 실행 시간
