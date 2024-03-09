@@ -54,7 +54,6 @@ def spt_cluster(redis_host='ds-redis-master', redis_port='6379', key_prefix='use
 
 
 if __name__ == '__main__':
-    # spt_cluster(sys.argv[1], sys.argv[2])
     # 성능테스트
     # arg1 : host
     # arg2 : port

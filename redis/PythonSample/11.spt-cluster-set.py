@@ -7,9 +7,9 @@ config  = configparser.ConfigParser()  ## 클래스 객체 생성
 config.read('./config.ini', encoding='utf-8')
 
 
-def spt_cluster(CNT):
-    redis_host=config["REDISCLUSTER"]["host"]
-    redis_port=config["REDISCLUSTER"]["port"]
+def spt_cluster(redis_host='ds-redis-master', redis_port='6379', key_prefix='user01', CNT=10000):
+    # redis_host=config["REDISCLUSTER"]["host"]
+    # redis_port=config["REDISCLUSTER"]["port"]
     redis_password=config["REDISCLUSTER"]["password"]
         
     startup_nodes = [{"host":redis_host, "port":redis_port}]
@@ -22,7 +22,7 @@ def spt_cluster(CNT):
     start_time = time.time() # 시작시간
     for i in range(CNT):
         # print(i)
-        rc.set(f"a:{i}", i)
+        rc.set(f"{key_prefix}:a:{i}", i)
 
     end_time = time.time() # 종료시간
     print("[key 1] duration time :", end_time - start_time)  # 현재시각 - 시작시간 = 실행 시간
@@ -34,8 +34,8 @@ def spt_cluster(CNT):
     start_time = time.time() # 시작시간
     for i in range(CNT):
         # print(i)
-        rc.set(f"a:{i}", i)
-        rc.set(f"b:{i}", i)
+        rc.set(f"{key_prefix}:a:{i}", i)
+        rc.set(f"{key_prefix}:b:{i}", i)
 
     end_time = time.time() # 종료시간
     print("[key 2] duration time :", end_time - start_time)  # 현재시각 - 시작시간 = 실행 시간
@@ -47,9 +47,9 @@ def spt_cluster(CNT):
     start_time = time.time() # 시작시간
     for i in range(CNT):
         # print(i)
-        rc.set(f"a:{i}", i)
-        rc.set(f"b:{i}", i)
-        rc.set(f"c:{i}", i, datetime.timedelta(seconds=300))    ## TTL 300초(5분)
+        rc.set(f"{key_prefix}:a:{i}", i)
+        rc.set(f"{key_prefix}:b:{i}", i)
+        rc.set(f"{key_prefix}:c:{i}", i, datetime.timedelta(seconds=300))    ## TTL 300초(5분)
 
     end_time = time.time() # 종료시간
     print("[key 3] duration time :", end_time - start_time)  # 현재시각 - 시작시간 = 실행 시간
@@ -57,7 +57,10 @@ def spt_cluster(CNT):
 
 
 if __name__ == '__main__':
-    # spt_cluster(sys.argv[1], sys.argv[2])
-    # 만건 성능테스트
-    spt_cluster(10000)
+    # 성능테스트
+    # arg1 : host
+    # arg2 : port
+    # arg3 : keyprefix
+    # arg4 : 건수
+    spt_cluster(sys.argv[1], sys.argv[2], sys.argv[3], int(sys.argv[4]))
 
