@@ -1,5 +1,5 @@
 import time
-import redis
+from rediscluster import RedisCluster
 import configparser
 
 config  = configparser.ConfigParser()  ## 클래스 객체 생성
@@ -7,20 +7,21 @@ config.read('./config.ini', encoding='utf-8')
 
 
 def spt_cluster(CNT):
-    redis_host=config["REDISMR"]["host"]
-    redis_port=config["REDISMR"]["port"]
-    redis_password=config["REDISMR"]["password"]
-    redis_db=config["REDISMR"]["db"]
-    
-    # redis 연결
-    rd = redis.Redis(host=redis_host, port=redis_port, db=redis_db, password=redis_password)
-
+    redis_host=config["REDISCLUSTER"]["host"]
+    redis_port=config["REDISCLUSTER"]["port"]
+    redis_password=config["REDISCLUSTER"]["password"]
+        
+    startup_nodes = [{"host":redis_host, "port":redis_port}]
+    rc = RedisCluster(startup_nodes=startup_nodes, 
+                    decode_responses=True, 
+                    skip_full_coverage_check=True,
+                    password=redis_password)
 
     # [테스트, key 1]============================================================
     start_time = time.time() # 시작시간
     for i in range(CNT):
         # print(i)
-        rd.get("a")
+        rc.set("a", 11)
 
     end_time = time.time() # 종료시간
     print("[key 1] duration time :", end_time - start_time)  # 현재시각 - 시작시간 = 실행 시간
@@ -36,8 +37,8 @@ def spt_cluster(CNT):
     start_time = time.time() # 시작시간
     for i in range(CNT):
         # print(i)
-        rd.get("a")
-        rd.get("b")
+        rc.set("a", 11)
+        rc.set("b", 22)
 
     end_time = time.time() # 종료시간
     print("[key 2] duration time :", end_time - start_time)  # 현재시각 - 시작시간 = 실행 시간
@@ -52,9 +53,9 @@ def spt_cluster(CNT):
     start_time = time.time() # 시작시간
     for i in range(CNT):
         # print(i)
-        rd.get("a")
-        rd.get("b")
-        rd.get("c")
+        rc.set("a", 11)
+        rc.set("b", 22)
+        rc.set("c", 33)
 
     end_time = time.time() # 종료시간
     print("[key 3] duration time :", end_time - start_time)  # 현재시각 - 시작시간 = 실행 시간
