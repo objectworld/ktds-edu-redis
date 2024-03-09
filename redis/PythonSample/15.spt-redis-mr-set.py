@@ -47,7 +47,7 @@ def spt_cluster(CNT, redis_host, redis_port):
         # print(i)
         rd.set(f"a:{CNT}", 11)
         rd.set(f"b:{CNT}", 22)
-        rc.set(f"c:{CNT}", 33, datetime.timedelta(seconds=300))    ## TTL 300초(5분)
+        rd.set(f"c:{CNT}", 33, datetime.timedelta(seconds=300))    ## TTL 300초(5분)
 
     end_time = time.time() # 종료시간
     print("[key 3] duration time :", end_time - start_time)  # 현재시각 - 시작시간 = 실행 시간
