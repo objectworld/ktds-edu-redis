@@ -1,3 +1,4 @@
+import sys
 import time
 import redis
 import configparser
@@ -6,9 +7,9 @@ config  = configparser.ConfigParser()  ## 클래스 객체 생성
 config.read('./config.ini', encoding='utf-8')
 
 
-def spt_cluster(CNT):
-    redis_host=config["REDISMR"]["host"]
-    redis_port=config["REDISMR"]["port"]
+def spt_cluster(CNT, redis_host, redis_port):
+    # redis_host=config["REDISMR"]["host"]
+    # redis_port=config["REDISMR"]["port"]
     redis_password=config["REDISMR"]["password"]
     redis_db=config["REDISMR"]["db"]
     
@@ -55,5 +56,8 @@ def spt_cluster(CNT):
 if __name__ == '__main__':
     # spt_cluster(sys.argv[1], sys.argv[2])
     # 만건 성능테스트
-    spt_cluster(10000)
+    # arg1 : 건수
+    # arg2 : host
+    # arg3 : port
+    spt_cluster(10000, sys.argv[1], sys.argv[2])
 
