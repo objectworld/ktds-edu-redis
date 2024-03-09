@@ -60,5 +60,5 @@ if __name__ == '__main__':
     # arg2 : port
     # arg3 : keyprefix
     # arg4 : 건수
-    spt_cluster(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
+    spt_cluster(sys.argv[1], sys.argv[2], sys.argv[3], int(sys.argv[4]))
 
