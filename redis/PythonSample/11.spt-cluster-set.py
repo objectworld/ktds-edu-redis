@@ -21,14 +21,10 @@ def spt_cluster(CNT):
     start_time = time.time() # 시작시간
     for i in range(CNT):
         # print(i)
-        rc.set("a", 11)
+        rc.set(f"a:{CNT}", 11)
 
     end_time = time.time() # 종료시간
     print("[key 1] duration time :", end_time - start_time)  # 현재시각 - 시작시간 = 실행 시간
-
-    # 테스트 결과
-    # duration time : 0.628307580947876
-    # duration time : 3.6477291584014893
 
 
 
@@ -37,15 +33,12 @@ def spt_cluster(CNT):
     start_time = time.time() # 시작시간
     for i in range(CNT):
         # print(i)
-        rc.set("a", 11)
-        rc.set("b", 22)
+        rc.set(f"a:{CNT}", 11)
+        rc.set(f"b:{CNT}", 22)
 
     end_time = time.time() # 종료시간
     print("[key 2] duration time :", end_time - start_time)  # 현재시각 - 시작시간 = 실행 시간
 
-    # 테스트 결과
-    # duration time : 1.9884583950042725
-    # duration time : 6.154340505599976
 
 
 
@@ -53,16 +46,13 @@ def spt_cluster(CNT):
     start_time = time.time() # 시작시간
     for i in range(CNT):
         # print(i)
-        rc.set("a", 11)
-        rc.set("b", 22)
-        rc.set("c", 33)
+        rc.set(f"a:{CNT}", 11)
+        rc.set(f"b:{CNT}", 22)
+        rc.set(f"c:{CNT}", 33)
 
     end_time = time.time() # 종료시간
     print("[key 3] duration time :", end_time - start_time)  # 현재시각 - 시작시간 = 실행 시간
 
-    # 테스트 결과
-    # duration time : 3.3824830055236816
-    # duration time : 9.962273597717285
 
 
 if __name__ == '__main__':
