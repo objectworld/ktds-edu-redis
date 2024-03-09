@@ -11,7 +11,7 @@ def spt_cluster(CNT):
     redis_port=config["REDISCLUSTER"]["port"]
     redis_password=config["REDISCLUSTER"]["password"]
         
-    startup_nodes = [{"host":redis_host, "port":redis_password}]
+    startup_nodes = [{"host":redis_host, "port":redis_port}]
     rc = RedisCluster(startup_nodes=startup_nodes, 
                     decode_responses=True, 
                     skip_full_coverage_check=True,
@@ -69,5 +69,6 @@ def spt_cluster(CNT):
 
 if __name__ == '__main__':
     # spt_cluster(sys.argv[1], sys.argv[2])
+    # 만건 성능테스트
     spt_cluster(10000)
 

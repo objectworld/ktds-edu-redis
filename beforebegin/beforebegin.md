@@ -200,8 +200,8 @@ $ mkdir -p /c/githubrepo
  
 $ cd /c/githubrepo
 
-$ git clone https://github.com/ssongman/ktds-edu-kafka.git
-Cloning into 'ktds-edu-kafka'...
+$ git clone https://github.com/ssongman/ktds-edu-redis.git
+Cloning into 'ktds-edu-redis'...
 remote: Enumerating objects: 181, done.
 remote: Counting objects: 100% (181/181), done.
 remote: Compressing objects: 100% (119/119), done.
@@ -212,7 +212,7 @@ Resolving deltas: 100% (33/33), done.
 
 
 $ ll /c/githubrepo
-drwxr-xr-x 1 ssong 197609 0 Feb 24 12:02 ktds-edu-kafka/
+drwxr-xr-x 1 ssong 197609 0 Feb 24 12:02 ktds-edu-redis/
 
 ```
 
@@ -227,7 +227,7 @@ drwxr-xr-x 1 ssong 197609 0 Feb 24 12:02 ktds-edu-kafka/
 ```
 ## typora 에서 아래 파일 오픈
 
-C:\githubrepo\ktds-edu-kafka\README.md
+C:\githubrepo\ktds-edu-redis\README.md
 ```
 
 ![image-20240225215314856](./beforebegin.assets/image-20240225215314856.png)
@@ -304,7 +304,7 @@ Mobaxterm 을 실행하여 VM 접속정보를 위한 신규 session 을 생성�
 - Port : 22
 - Advanced SSH settings
   - Use private key
-    - C:\githubrepo\ktds-edu-kafka\vm-key\ktdsedu-employee.pem
+    - C:\githubrepo\ktds-edu-redis\vm-key\ktdsedu-employee.pem
     - 교육자료 Download 되는 자료에 위 key가 포함되어 있음
 
 
@@ -320,7 +320,7 @@ Mobaxterm 을 실행하여 VM 접속정보를 위한 신규 session 을 생성�
 
 ```sh
 # 최신 데이터를 한번 더 받는다.
-$ cd ~/githubrepo/ktds-edu-kafka
+$ cd ~/githubrepo/ktds-edu-redis
 $ git pull
 
 
@@ -336,13 +336,13 @@ $ git pull
 
 ```sh
 # git repo 삭제
-$ rm -rf ~/githubrepo/ktds-edu-kafka/
+$ rm -rf ~/githubrepo/ktds-edu-redis/
 
 $ cd ~/githubrepo
 
 ## git clone 수행
-$ git clone https://github.com/ssongman/ktds-edu-kafka.git
-Cloning into 'ktds-edu-kafka'...
+$ git clone https://github.com/ssongman/ktds-edu-redis.git
+Cloning into 'ktds-edu-redis'...
 remote: Enumerating objects: 320, done.
 remote: Counting objects: 100% (320/320), done.
 remote: Compressing objects: 100% (220/220), done.
@@ -352,9 +352,9 @@ Resolving deltas: 100% (95/95), done.
 
 
 # 확인
-$ cd  ~/githubrepo/ktds-edu-kafka
+$ cd  ~/githubrepo/ktds-edu-redis
 
-$ ll ~/githubrepo/ktds-edu-kafka
+$ ll ~/githubrepo/ktds-edu-redis
 drwxrwxr-x 8 ktdseduuser ktdseduuser 4096 Sep  3 12:27 .git/
 -rw-rw-r-- 1 ktdseduuser ktdseduuser  382 Sep  2 13:45 .gitignore
 -rw-rw-r-- 1 ktdseduuser ktdseduuser 4006 Sep  2 13:45 README.md
