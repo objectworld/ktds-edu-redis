@@ -7,7 +7,7 @@ config  = configparser.ConfigParser()  ## 클래스 객체 생성
 config.read('./config.ini', encoding='utf-8')
 
 
-def spt_cluster(CNT, redis_host, redis_port):
+def spt_cluster(redis_host='ds-redis-master', redis_port='6379', key_prefix='user01', CNT=10000):
     # redis_host=config["REDISMR"]["host"]
     # redis_port=config["REDISMR"]["port"]
     redis_password=config["REDISMR"]["password"]
@@ -21,7 +21,7 @@ def spt_cluster(CNT, redis_host, redis_port):
     start_time = time.time() # 시작시간
     for i in range(CNT):
         # print(i)
-        rd.set(f"a:{CNT}", 11)
+        rd.set(f"{key_prefix}:a:{i}", i)
 
     end_time = time.time() # 종료시간
     print("[key 1] duration time :", end_time - start_time)  # 현재시각 - 시작시간 = 실행 시간
@@ -33,8 +33,8 @@ def spt_cluster(CNT, redis_host, redis_port):
     start_time = time.time() # 시작시간
     for i in range(CNT):
         # print(i)
-        rd.set(f"a:{CNT}", 11)
-        rd.set(f"b:{CNT}", 22)
+        rd.set(f"{key_prefix}:a:{i}", i)
+        rd.set(f"{key_prefix}:b:{i}", i)
 
     end_time = time.time() # 종료시간
     print("[key 2] duration time :", end_time - start_time)  # 현재시각 - 시작시간 = 실행 시간
@@ -45,9 +45,9 @@ def spt_cluster(CNT, redis_host, redis_port):
     start_time = time.time() # 시작시간
     for i in range(CNT):
         # print(i)
-        rd.set(f"a:{CNT}", 11)
-        rd.set(f"b:{CNT}", 22)
-        rd.set(f"c:{CNT}", 33, datetime.timedelta(seconds=300))    ## TTL 300초(5분)
+        rd.set(f"{key_prefix}:a:{i}", i)
+        rd.set(f"{key_prefix}:b:{i}", i)
+        rd.set(f"{key_prefix}:c:{i}", i, datetime.timedelta(seconds=300))    ## TTL 300초(5분)
 
     end_time = time.time() # 종료시간
     print("[key 3] duration time :", end_time - start_time)  # 현재시각 - 시작시간 = 실행 시간
@@ -55,9 +55,10 @@ def spt_cluster(CNT, redis_host, redis_port):
 
 if __name__ == '__main__':
     # spt_cluster(sys.argv[1], sys.argv[2])
-    # 만건 성능테스트
-    # arg1 : 건수
-    # arg2 : host
-    # arg3 : port
-    spt_cluster(10000, sys.argv[1], sys.argv[2])
+    # 성능테스트
+    # arg1 : host
+    # arg2 : port
+    # arg3 : keyprefix
+    # arg4 : 건수
+    spt_cluster(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
 

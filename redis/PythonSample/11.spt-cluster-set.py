@@ -22,7 +22,7 @@ def spt_cluster(CNT):
     start_time = time.time() # 시작시간
     for i in range(CNT):
         # print(i)
-        rc.set(f"a:{CNT}", 11)
+        rc.set(f"a:{i}", i)
 
     end_time = time.time() # 종료시간
     print("[key 1] duration time :", end_time - start_time)  # 현재시각 - 시작시간 = 실행 시간
@@ -34,8 +34,8 @@ def spt_cluster(CNT):
     start_time = time.time() # 시작시간
     for i in range(CNT):
         # print(i)
-        rc.set(f"a:{CNT}", 11)
-        rc.set(f"b:{CNT}", 22)
+        rc.set(f"a:{i}", i)
+        rc.set(f"b:{i}", i)
 
     end_time = time.time() # 종료시간
     print("[key 2] duration time :", end_time - start_time)  # 현재시각 - 시작시간 = 실행 시간
@@ -47,9 +47,9 @@ def spt_cluster(CNT):
     start_time = time.time() # 시작시간
     for i in range(CNT):
         # print(i)
-        rc.set(f"a:{CNT}", 11)
-        rc.set(f"b:{CNT}", 22)
-        rc.set(f"c:{CNT}", 33, datetime.timedelta(seconds=300))    ## TTL 300초(5분)
+        rc.set(f"a:{i}", i)
+        rc.set(f"b:{i}", i)
+        rc.set(f"c:{i}", i, datetime.timedelta(seconds=300))    ## TTL 300초(5분)
 
     end_time = time.time() # 종료시간
     print("[key 3] duration time :", end_time - start_time)  # 현재시각 - 시작시간 = 실행 시간
