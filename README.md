@@ -1,8 +1,4 @@
-# README
-
-
-
-## Redis on Kubernetes
+# Redis on Kubernetes
 
 > Container 기반 Redis 교육자료 !!
 
