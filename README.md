@@ -53,7 +53,7 @@
 
 
 
-## 4. Redis Hands-in ( [가이드 문서 보기](redis/4.redis-hands-in.md) )
+## 4. Redis Hands-in ( [가이드 문서 보기](redis/4.Redis-hands-in.md) )
 
 ### 1) Redis Install 준비
 
@@ -84,7 +84,7 @@
 
 
 
-## 5. Redis Hands-in2 ( [가이드 문서 보기](redis/5.redis-hands-in2.md) )
+## 5. Redis Hands-in2 ( [가이드 문서 보기](redis/5.Redis-hands-in2.md) )
 
 ### 1) [EduCluster] Redis-MR 서버 접근
 
@@ -123,7 +123,7 @@
 
 
 
-## 6. Redis Hands-in3 ( [가이드 문서 보기](redis/6.redis-hands-in3.md) )
+## 6. Redis Hands-in3 ( [가이드 문서 보기](redis/6.Redis-hands-in3.md) )
 
 ### 1) Master-Replica FailOver
 
