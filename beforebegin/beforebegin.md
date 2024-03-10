@@ -246,33 +246,34 @@ C:\githubrepo\ktds-edu-redis\README.md
 
 ## 3.1 개인 VM 서버 주소 확인- ★★★
 
-개인별 VM Server 접속 환경 및 Kafka 실습을 위한 개인 Topic 정보를 확인하자.
-
-|  NO  | 담당자 | 소속                | email          | VM  Server | VM  Server IP | kafka  Topic | kafka  Group   | 비고 |
-| :--: | :----: | :------------------ | -------------- | ---------- | ------------- | ------------ | -------------- | ---- |
-|  1   | 송양종 | ICIS Tr 아키텍처팀  | yj.song@kt.com | bastion01  | 34.xx.xx.xx   | edu-topic01  | edu-topic01-cg |      |
-|  2   | 송양종 | ICIS  Tr 아키텍처팀 | yj.song@kt.com | bastion02  |               | edu-topic02  | edu-topic02-cg |      |
-|  3   |        |                     |                |            |               |              |                |      |
-|      |        |                     |                |            |               |              |                |      |
-|      |        |                     |                |            |               |              |                |      |
-|      |        |                     |                |            |               |              |                |      |
-|      |        |                     |                |            |               |              |                |      |
-|      |        |                     |                |            |               |              |                |      |
-|      |        |                     |                |            |               |              |                |      |
-|      |        |                     |                |            |               |              |                |      |
-|      |        |                     |                |            |               |              |                |      |
-|      |        |                     |                |            |               |              |                |      |
-|      |        |                     |                |            |               |              |                |      |
-|      |        |                     |                |            |               |              |                |      |
-|      |        |                     |                |            |               |              |                |      |
-|      |        |                     |                |            |               |              |                |      |
-|      |        |                     |                |            |               |              |                |      |
-|      |        |                     |                |            |               |              |                |      |
-|      |        |                     |                |            |               |              |                |      |
-|      |        |                     |                |            |               |              |                |      |
-|      |        |                     |                |            |               |              |                |      |
+개인별 VM Server 접속 환경 및 실습을 위한 개인 Namespace 를 확인하자.
 
 
+
+|  No  | 이름   | 소속            | email               | VM Server | VM Server IP | EduCluster NS | 비고 |
+| :--: | ------ | --------------- | ------------------- | --------- | ------------ | :-----------: | ---- |
+|  1   | 송양종 | Cloud성장전략팀 | yj.song@kt.com      |           |              |    user01     |      |
+|  2   | 송양종 | Cloud성장전략팀 | yj.song@kt.com      |           |              |    user02     |      |
+|  3   | 구도희 | 재무DX개발팀    | dh.gu@kt.com        |           |              |    user03     |      |
+|  4   | 권석원 | 유통운영혁신팀  | seokwon.kwon@kt.com |           |              |    user04     |      |
+|  5   | 김예영 | 플랫폼CoE팀     | yeyoung.kim@kt.com  |           |              |    user05     |      |
+|  6   | 김하성 | SI개발팀        | haseong.kim@kt.com  |           |              |    user06     |      |
+|  7   | 류대완 | 금융수행팀      | ryudaewan@kt.com    |           |              |    user07     |      |
+|  8   | 박선아 | B2C CRM팀       | suna.park@kt.com    |           |              |    user08     |      |
+|  9   | 변상진 | 메시징플랫폼팀  | sangjin.byun@kt.com |           |              |    user09     |      |
+|  10  | 석미화 | OSS개발2팀      | smh0752@kt.com      |           |              |    user10     |      |
+|  11  | 신민진 | SI개발팀        | minjin.shin@kt.com  |           |              |    user11     |      |
+|  12  | 유광선 | 플랫폼컨설팅팀  | ksyoo@kt.com        |           |              |    user12     |      |
+|  13  | 윤지혜 | CRM사업팀       | jihye.yune@kt.com   |           |              |    user13     |      |
+|  14  | 이미소 | SI개발팀        | mi.so.lee@kt.com    |           |              |    user14     |      |
+|  15  | 이우성 | 빌링개발팀      | woosung.lee@kt.com  |           |              |    user15     |      |
+|  16  | 이화경 | DX인프라팀      | hwakyung.lee@kt.com |           |              |    user16     |      |
+|  17  | 임채림 | SI개발팀        | cl.lim@kt.com       |           |              |    user17     |      |
+|  18  | 임혜진 | 경영인프라팀    | lim.hyejin@kt.com   |           |              |    user18     |      |
+|  19  | 장병훈 | 인프라DX개발팀  | bottle.jang@kt.com  |           |              |    user19     |      |
+|  20  | 장진호 | 데이터DX개발팀  | jinhoss.jang@kt.com |           |              |    user20     |      |
+|  21  | 조민정 | 고객DX솔루션팀  | hs-cho@kt.com       |           |              |    user21     |      |
+|  22  | 최정우 | SI개발팀        | jwoo.choi@kt.com    |           |              |    user22     |      |
 
 
 
