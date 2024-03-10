@@ -248,30 +248,32 @@ C:\githubrepo\ktds-edu-redis\README.md
 
 개인별 VM Server 접속 환경 및 실습을 위한 개인별 Redis Key Prefix를 확인하자.
 
-|  No  |  이름  | 소속            | email               | VM Server | VM Server IP   | Key Prefix | 비고 |
-| :--: | :----: | --------------- | ------------------- | :-------: | -------------- | :--------: | :--: |
-|  1   | 송양종 | Cloud성장전략팀 | yj.song@kt.com      | bastion01 | 52.78.167.68   |   user01   |      |
-|  2   | 송양종 | Cloud성장전략팀 | yj.song@kt.com      | bastion02 | 3.36.88.60     |   user02   |      |
-|  3   | 구도희 | 재무DX개발팀    | dh.gu@kt.com        | bastion03 | 3.36.60.57     |   user03   |      |
-|  4   | 권석원 | 유통운영혁신팀  | seokwon.kwon@kt.com | bastion04 | 3.36.97.54     |   user04   |      |
-|  5   | 김예영 | 플랫폼CoE팀     | yeyoung.kim@kt.com  | bastion05 | 3.39.227.125   |   user05   |      |
-|  6   | 김하성 | SI개발팀        | haseong.kim@kt.com  | bastion06 | 13.125.239.65  |   user06   |      |
-|  7   | 류대완 | 금융수행팀      | ryudaewan@kt.com    | bastion07 | 3.35.136.10    |   user07   |      |
-|  8   | 박선아 | B2C CRM팀       | suna.park@kt.com    | bastion08 | 13.209.85.183  |   user08   |      |
-|  9   | 변상진 | 메시징플랫폼팀  | sangjin.byun@kt.com | bastion09 | 43.203.203.223 |   user09   |      |
-|  10  | 석미화 | OSS개발2팀      | smh0752@kt.com      | bastion10 | 43.202.60.40   |   user10   |      |
-|  11  | 신민진 | SI개발팀        | minjin.shin@kt.com  | bastion11 | 3.39.250.0     |   user11   |      |
-|  12  | 유광선 | 플랫폼컨설팅팀  | ksyoo@kt.com        | bastion12 | 3.38.182.217   |   user12   |      |
-|  13  | 윤지혜 | CRM사업팀       | jihye.yune@kt.com   | bastion13 | 3.38.151.200   |   user13   |      |
-|  14  | 이미소 | SI개발팀        | mi.so.lee@kt.com    | bastion14 | 3.36.55.15     |   user14   |      |
-|  15  | 이우성 | 빌링개발팀      | woosung.lee@kt.com  | bastion15 | 43.201.103.154 |   user15   |      |
-|  16  | 이화경 | DX인프라팀      | hwakyung.lee@kt.com | bastion16 | 13.209.84.14   |   user16   |      |
-|  17  | 임채림 | SI개발팀        | cl.lim@kt.com       | bastion17 | 3.36.119.166   |   user17   |      |
-|  18  | 임혜진 | 경영인프라팀    | lim.hyejin@kt.com   | bastion18 | 43.201.252.201 |   user18   |      |
-|  19  | 장병훈 | 인프라DX개발팀  | bottle.jang@kt.com  | bastion19 | 3.39.249.54    |   user19   |      |
-|  20  | 장진호 | 데이터DX개발팀  | jinhoss.jang@kt.com | bastion20 | 13.124.119.246 |   user20   |      |
-|  21  | 조민정 | 고객DX솔루션팀  | hs-cho@kt.com       | bastion21 | 43.200.254.212 |   user21   |      |
-|  22  | 최정우 | SI개발팀        | jwoo.choi@kt.com    | bastion22 | 3.35.222.235   |   user22   |      |
+* 기준일자: 2024.03.11(월)
+
+|  No  |   이름    | 소속            | email               | VM Server | VM Server IP   | Key Prefix | 비고 |
+| :--: | :-------: | --------------- | ------------------- | :-------: | -------------- | :--------: | :--: |
+|  1   |  송양종   | Cloud성장전략팀 | yj.song@kt.com      | bastion01 | 52.78.167.68   |   user01   |      |
+|  2   |  송양종   | Cloud성장전략팀 | yj.song@kt.com      | bastion02 | 3.36.88.60     |   user02   |      |
+|  3   |  구도희   | 재무DX개발팀    | dh.gu@kt.com        | bastion03 | 3.36.60.57     |   user03   |      |
+|  4   |  권석원   | 유통운영혁신팀  | seokwon.kwon@kt.com | bastion04 | 3.36.97.54     |   user04   |      |
+|  5   |  김예영   | 플랫폼CoE팀     | yeyoung.kim@kt.com  | bastion05 | 3.39.227.125   |   user05   |      |
+|  6   | (x)김하성 | SI개발팀        | haseong.kim@kt.com  | bastion06 | 13.125.239.65  |   user06   | 미참 |
+|  7   |  류대완   | 금융수행팀      | ryudaewan@kt.com    | bastion07 | 3.35.136.10    |   user07   |      |
+|  8   |  박선아   | B2C CRM팀       | suna.park@kt.com    | bastion08 | 13.209.85.183  |   user08   |      |
+|  9   |  변상진   | 메시징플랫폼팀  | sangjin.byun@kt.com | bastion09 | 43.203.203.223 |   user09   |      |
+|  10  |  석미화   | OSS개발2팀      | smh0752@kt.com      | bastion10 | 43.202.60.40   |   user10   |      |
+|  11  |  신민진   | SI개발팀        | minjin.shin@kt.com  | bastion11 | 3.39.250.0     |   user11   |      |
+|  12  |  유광선   | 플랫폼컨설팅팀  | ksyoo@kt.com        | bastion12 | 3.38.182.217   |   user12   |      |
+|  13  |  윤지혜   | CRM사업팀       | jihye.yune@kt.com   | bastion13 | 3.38.151.200   |   user13   |      |
+|  14  |  이미소   | SI개발팀        | mi.so.lee@kt.com    | bastion14 | 3.36.55.15     |   user14   |      |
+|  15  |  이우성   | 빌링개발팀      | woosung.lee@kt.com  | bastion15 | 43.201.103.154 |   user15   |      |
+|  16  |  이화경   | DX인프라팀      | hwakyung.lee@kt.com | bastion16 | 13.209.84.14   |   user16   |      |
+|  17  |  임채림   | SI개발팀        | cl.lim@kt.com       | bastion17 | 3.36.119.166   |   user17   |      |
+|  18  |  임혜진   | 경영인프라팀    | lim.hyejin@kt.com   | bastion18 | 43.201.252.201 |   user18   |      |
+|  19  |  장병훈   | 인프라DX개발팀  | bottle.jang@kt.com  | bastion19 | 3.39.249.54    |   user19   |      |
+|  20  |  장진호   | 데이터DX개발팀  | jinhoss.jang@kt.com | bastion20 | 13.124.119.246 |   user20   |      |
+|  21  |  조민정   | 고객DX솔루션팀  | hs-cho@kt.com       | bastion21 | 43.200.254.212 |   user21   |      |
+|  22  |  최정우   | SI개발팀        | jwoo.choi@kt.com    | bastion22 | 3.35.222.235   |   user22   |      |
 
 
 
