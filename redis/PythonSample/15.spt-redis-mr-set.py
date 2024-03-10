@@ -28,6 +28,7 @@ def spt_cluster(redis_host='ds-redis-master', redis_port='6379', key_prefix='use
 
 
 
+    print("[SPT] system performance testing ....")
 
     # [테스트, key 2]============================================================
     start_time = time.time() # 시작시간

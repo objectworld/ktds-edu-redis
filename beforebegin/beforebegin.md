@@ -248,32 +248,32 @@ C:\githubrepo\ktds-edu-redis\README.md
 
 개인별 VM Server 접속 환경 및 실습을 위한 개인별 Redis Key Prefix를 확인하자.
 
+|  No  |  이름  | 소속            | email               | VM Server | VM Server IP   | Key Prefix | 비고 |
+| :--: | :----: | --------------- | ------------------- | :-------: | -------------- | :--------: | :--: |
+|  1   | 송양종 | Cloud성장전략팀 | yj.song@kt.com      | bastion01 | 52.78.167.68   |   user01   |      |
+|  2   | 송양종 | Cloud성장전략팀 | yj.song@kt.com      | bastion02 | 3.36.88.60     |   user02   |      |
+|  3   | 구도희 | 재무DX개발팀    | dh.gu@kt.com        | bastion03 | 3.36.60.57     |   user03   |      |
+|  4   | 권석원 | 유통운영혁신팀  | seokwon.kwon@kt.com | bastion04 | 3.36.97.54     |   user04   |      |
+|  5   | 김예영 | 플랫폼CoE팀     | yeyoung.kim@kt.com  | bastion05 | 3.39.227.125   |   user05   |      |
+|  6   | 김하성 | SI개발팀        | haseong.kim@kt.com  | bastion06 | 13.125.239.65  |   user06   |      |
+|  7   | 류대완 | 금융수행팀      | ryudaewan@kt.com    | bastion07 | 3.35.136.10    |   user07   |      |
+|  8   | 박선아 | B2C CRM팀       | suna.park@kt.com    | bastion08 | 13.209.85.183  |   user08   |      |
+|  9   | 변상진 | 메시징플랫폼팀  | sangjin.byun@kt.com | bastion09 | 43.203.203.223 |   user09   |      |
+|  10  | 석미화 | OSS개발2팀      | smh0752@kt.com      | bastion10 | 43.202.60.40   |   user10   |      |
+|  11  | 신민진 | SI개발팀        | minjin.shin@kt.com  | bastion11 | 3.39.250.0     |   user11   |      |
+|  12  | 유광선 | 플랫폼컨설팅팀  | ksyoo@kt.com        | bastion12 | 3.38.182.217   |   user12   |      |
+|  13  | 윤지혜 | CRM사업팀       | jihye.yune@kt.com   | bastion13 | 3.38.151.200   |   user13   |      |
+|  14  | 이미소 | SI개발팀        | mi.so.lee@kt.com    | bastion14 | 3.36.55.15     |   user14   |      |
+|  15  | 이우성 | 빌링개발팀      | woosung.lee@kt.com  | bastion15 | 43.201.103.154 |   user15   |      |
+|  16  | 이화경 | DX인프라팀      | hwakyung.lee@kt.com | bastion16 | 13.209.84.14   |   user16   |      |
+|  17  | 임채림 | SI개발팀        | cl.lim@kt.com       | bastion17 | 3.36.119.166   |   user17   |      |
+|  18  | 임혜진 | 경영인프라팀    | lim.hyejin@kt.com   | bastion18 | 43.201.252.201 |   user18   |      |
+|  19  | 장병훈 | 인프라DX개발팀  | bottle.jang@kt.com  | bastion19 | 3.39.249.54    |   user19   |      |
+|  20  | 장진호 | 데이터DX개발팀  | jinhoss.jang@kt.com | bastion20 | 13.124.119.246 |   user20   |      |
+|  21  | 조민정 | 고객DX솔루션팀  | hs-cho@kt.com       | bastion21 | 43.200.254.212 |   user21   |      |
+|  22  | 최정우 | SI개발팀        | jwoo.choi@kt.com    | bastion22 | 3.35.222.235   |   user22   |      |
 
 
-|  No  | 이름   | 소속            | email               | VM Server | VM Server IP | Key Prefix | 비고 |
-| :--: | ------ | --------------- | ------------------- | --------- | ------------ | :--------: | ---- |
-|  1   | 송양종 | Cloud성장전략팀 | yj.song@kt.com      |           |              |   user01   |      |
-|  2   | 송양종 | Cloud성장전략팀 | yj.song@kt.com      |           |              |   user02   |      |
-|  3   | 구도희 | 재무DX개발팀    | dh.gu@kt.com        |           |              |   user03   |      |
-|  4   | 권석원 | 유통운영혁신팀  | seokwon.kwon@kt.com |           |              |   user04   |      |
-|  5   | 김예영 | 플랫폼CoE팀     | yeyoung.kim@kt.com  |           |              |   user05   |      |
-|  6   | 김하성 | SI개발팀        | haseong.kim@kt.com  |           |              |   user06   |      |
-|  7   | 류대완 | 금융수행팀      | ryudaewan@kt.com    |           |              |   user07   |      |
-|  8   | 박선아 | B2C CRM팀       | suna.park@kt.com    |           |              |   user08   |      |
-|  9   | 변상진 | 메시징플랫폼팀  | sangjin.byun@kt.com |           |              |   user09   |      |
-|  10  | 석미화 | OSS개발2팀      | smh0752@kt.com      |           |              |   user10   |      |
-|  11  | 신민진 | SI개발팀        | minjin.shin@kt.com  |           |              |   user11   |      |
-|  12  | 유광선 | 플랫폼컨설팅팀  | ksyoo@kt.com        |           |              |   user12   |      |
-|  13  | 윤지혜 | CRM사업팀       | jihye.yune@kt.com   |           |              |   user13   |      |
-|  14  | 이미소 | SI개발팀        | mi.so.lee@kt.com    |           |              |   user14   |      |
-|  15  | 이우성 | 빌링개발팀      | woosung.lee@kt.com  |           |              |   user15   |      |
-|  16  | 이화경 | DX인프라팀      | hwakyung.lee@kt.com |           |              |   user16   |      |
-|  17  | 임채림 | SI개발팀        | cl.lim@kt.com       |           |              |   user17   |      |
-|  18  | 임혜진 | 경영인프라팀    | lim.hyejin@kt.com   |           |              |   user18   |      |
-|  19  | 장병훈 | 인프라DX개발팀  | bottle.jang@kt.com  |           |              |   user19   |      |
-|  20  | 장진호 | 데이터DX개발팀  | jinhoss.jang@kt.com |           |              |   user20   |      |
-|  21  | 조민정 | 고객DX솔루션팀  | hs-cho@kt.com       |           |              |   user21   |      |
-|  22  | 최정우 | SI개발팀        | jwoo.choi@kt.com    |           |              |   user22   |      |
 
 
 
@@ -322,6 +322,7 @@ Mobaxterm 을 실행하여 VM 접속정보를 위한 신규 session 을 생성�
 ```sh
 # 최신 데이터를 한번 더 받는다.
 $ cd ~/githubrepo/ktds-edu-redis
+
 $ git pull
 
 
@@ -344,27 +345,28 @@ $ cd ~/githubrepo
 ## git clone 수행
 $ git clone https://github.com/ssongman/ktds-edu-redis.git
 Cloning into 'ktds-edu-redis'...
-remote: Enumerating objects: 320, done.
-remote: Counting objects: 100% (320/320), done.
-remote: Compressing objects: 100% (220/220), done.
-remote: Total 320 (delta 95), reused 277 (delta 56), pack-reused 0
-Receiving objects: 100% (320/320), 8.40 MiB | 24.22 MiB/s, done.
-Resolving deltas: 100% (95/95), done.
+remote: Enumerating objects: 362, done.
+remote: Counting objects: 100% (362/362), done.
+remote: Compressing objects: 100% (237/237), done.
+remote: Total 362 (delta 171), reused 282 (delta 94), pack-reused 0
+Receiving objects: 100% (362/362), 3.06 MiB | 3.31 MiB/s, done.
+Resolving deltas: 100% (171/171), done.
 
 
 # 확인
 $ cd  ~/githubrepo/ktds-edu-redis
 
 $ ll ~/githubrepo/ktds-edu-redis
-drwxrwxr-x 8 ktdseduuser ktdseduuser 4096 Sep  3 12:27 .git/
--rw-rw-r-- 1 ktdseduuser ktdseduuser  382 Sep  2 13:45 .gitignore
--rw-rw-r-- 1 ktdseduuser ktdseduuser 4006 Sep  2 13:45 README.md
--rw-rw-r-- 1 ktdseduuser ktdseduuser  461 Sep  2 13:45 SUMMARY.md
-drwxrwxr-x 4 ktdseduuser ktdseduuser 4096 Sep  3 12:27 beforebegin/
-drwxrwxr-x 4 ktdseduuser ktdseduuser 4096 Sep  2 13:45 cloud-setup/
-drwxrwxr-x 2 ktdseduuser ktdseduuser 4096 Sep  2 13:51 gcp-vm-key/
-drwxrwxr-x 7 ktdseduuser ktdseduuser 4096 Sep  3 12:27 kafka/
-drwxrwxr-x 8 ktdseduuser ktdseduuser 4096 Sep  2 13:45 redis/
+drwxrwxr-x  7 ubuntu ubuntu 4096 Mar 10 12:26 ./
+drwxrwxr-x  4 ubuntu ubuntu 4096 Mar 10 12:26 ../
+drwxrwxr-x  8 ubuntu ubuntu 4096 Mar 10 12:26 .git/
+-rw-rw-r--  1 ubuntu ubuntu  389 Mar 10 12:26 .gitignore
+-rw-rw-r--  1 ubuntu ubuntu 2060 Mar 10 12:26 README.md
+-rw-rw-r--  1 ubuntu ubuntu  461 Mar 10 12:26 SUMMARY.md
+drwxrwxr-x  3 ubuntu ubuntu 4096 Mar 10 12:26 beforebegin/
+drwxrwxr-x  4 ubuntu ubuntu 4096 Mar 10 12:26 cloud-setup/
+drwxrwxr-x 12 ubuntu ubuntu 4096 Mar 10 12:26 redis/
+drwxrwxr-x  2 ubuntu ubuntu 4096 Mar 10 12:26 vm-key/
 
 
 ```
